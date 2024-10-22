@@ -7,7 +7,6 @@ on:
         description: Run Specific Job
         type: boolean
         required: false
-      
       custom_message:
         description: Enter a custom message
         required: true
@@ -23,4 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Printing Custom Message
-        run: echo ${{inputs.custom_message}}
+        run: echo ${{ inputs.custom_message }}
+
+      - name: Printing run-job boolean value
+        run: echo ${{ inputs.run_job }}
